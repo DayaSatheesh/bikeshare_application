@@ -57,6 +57,7 @@ class ModelConfig(BaseModel):
     atemp:str
     hum:str
     windspeed:str
+    format:str
     
     monthmapping: Dict[str, int]
     yearmapping: Dict[str, int]
