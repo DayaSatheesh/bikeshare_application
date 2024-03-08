@@ -69,10 +69,10 @@ yearmapping:
   2011: 1
 
 seasonmapping:
- fall: 0
- winter: 1
- spring: 2
- summer: 3
+  fall: 0
+  winter: 1
+  spring: 2
+  summer: 3
 
 hourmapping:
   6am: 5
