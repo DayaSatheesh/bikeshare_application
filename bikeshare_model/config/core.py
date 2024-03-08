@@ -46,6 +46,17 @@ class ModelConfig(BaseModel):
     weathersit:str 
     day:str
     dteday:str
+    year:str
+    month:str
+    season:str
+    weathersit:str
+    holiday:str
+    workingday:str
+    hr:str
+    temp:str
+    atemp:str
+    hum:str
+    windspeed:str
     
     monthmapping: Dict[str, int]
     yearmapping: Dict[str, int]
