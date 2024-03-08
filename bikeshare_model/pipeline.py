@@ -6,7 +6,7 @@ sys.path.append(str(root))
 
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 
 from bikeshare_model.config.core import config
 from bikeshare_model.processing.features import WeekdayImputer
