@@ -62,8 +62,6 @@ hum: hum #--hum outlier handling
 
 windspeed: windspeed #--windspeed outlier handling
 
-weekday: weekday #--weekday encoding
-
 format: '%Y-%m-%d'
 
 yearmapping:
