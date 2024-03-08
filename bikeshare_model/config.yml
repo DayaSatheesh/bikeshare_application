@@ -48,8 +48,6 @@ month: month #--Month mapping
 
 season: season #-- season mapping
 
-weathersit: weathersit #--weathersit mappng
-
 holiday: holiday #--holiday mapping
 
 workingday: workingday #--working day
