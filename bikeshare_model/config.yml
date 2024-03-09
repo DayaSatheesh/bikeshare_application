@@ -25,6 +25,7 @@ features:      # final features to be use
   - year
   - month
   - weekday
+  - dteday
 
 unused_fields:  # Features to drop before pipeline
   - dteday
