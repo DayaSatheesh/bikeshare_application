@@ -15,7 +15,7 @@ class WeekdayImputer(BaseEstimator, TransformerMixin):
         self.dteday = dteday
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
-        print(pd.info())
+        print(X.info())
         X[self.day] = pd.to_datetime(X[self.dteday]).dt.day_name()
         self.nan_indices = X.loc[X.weekday.isnull(), self.variable].index
         return self
