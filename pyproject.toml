@@ -46,3 +46,6 @@ profile = "black"
 line_length = 100
 lines_between_sections = 1
 skip = "migrations"
+
+[tool.pyproject-installer]
+include = ["VERSION"]
