@@ -3,6 +3,10 @@ requires = [
     "setuptools>=42",
     "wheel"
 ]
+
+[tool.pyproject-installer]
+include = ["VERSION"]
+
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
@@ -46,6 +50,3 @@ profile = "black"
 line_length = 100
 lines_between_sections = 1
 skip = "migrations"
-
-[tool.pyproject-installer]
-include = ["VERSION"]
