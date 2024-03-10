@@ -3,6 +3,11 @@ requires = [
     "setuptools>=42",
     "wheel"
 ]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+root = "."
+
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
