@@ -5,7 +5,7 @@ requires = [
 ]
 
 [tool.pyproject-installer]
-include = ["VERSION"]
+include = ["bikeshare_model/VERSION"]
 
 build-backend = "setuptools.build_meta"
 
