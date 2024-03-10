@@ -4,8 +4,9 @@ requires = [
     "wheel"
 ]
 
-[tool.pyproject-installer]
-include = ["bikeshare_model/VERSION"]
+[tool.setuptools_scm]
+version_scheme = "post-release"
+root = "."
 
 build-backend = "setuptools.build_meta"
 
