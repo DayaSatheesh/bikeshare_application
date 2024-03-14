@@ -5,7 +5,7 @@ FROM python:3.10
 ADD . .
 
 # specify working directory
-WORKDIR /bikeshare_application
+WORKDIR /bikeshare_model
 
 # update pip
 RUN pip install --upgrade pip
