@@ -11,6 +11,7 @@ WORKDIR /bikeshare_application
 RUN pip install --upgrade pip
 
 # install dependencies
+RUN pwd
 RUN pip install -r requirements/requirements.txt
 
 # expose port for application
