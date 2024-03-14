@@ -12,7 +12,7 @@ RUN pip install --upgrade pip
 
 # install dependencies
 RUN pwd
-RUN pip install -r requirements/requirements.txt
+RUN pip install -r /bikeshare_application/requirements/requirements.txt
 
 # expose port for application
 EXPOSE 8001
