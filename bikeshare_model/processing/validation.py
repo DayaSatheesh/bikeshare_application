@@ -11,13 +11,13 @@ import pandas as pd
 from pydantic import BaseModel, ValidationError
 
 from bikeshare_model.config.core import config
-from bikeshare_model.processing.data_manager import pre_pipeline_preparation
+from bikeshare_model.processing.data_manager import extract_yr_mnth
 
 
 def validate_inputs(*, input_df: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[dict]]:
     """Check model inputs for unprocessable values."""
 
-    pre_processed = pre_pipeline_preparation(data_frame=input_df)
+    pre_processed = extract_yr_mnth(data_frame=input_df)
     validated_data = pre_processed[config.model_config.features].copy()
     errors = None
 
