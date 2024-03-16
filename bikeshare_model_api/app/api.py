@@ -4,6 +4,7 @@ file = Path(__file__).resolve()
 parent, root, dirparent = file.parent, file.parents[1], file.parents[2]
 sys.path.append(str(root))
 sys.path.append(str(dirparent)+"/bikeshare_model")
+sys.path.append(str(dirparent))
 
 import json
 from typing import Any
