@@ -2,6 +2,7 @@ include *.txt
 include *.md
 include *.pkl
 recursive-include ./bikeshare_model *
+recursive-include ./bikeshare_model_api *
 
 include bikeshare_model/datasets/bike-sharing-dataset.csv
 include bikeshare_model/trained_models/*.pkl

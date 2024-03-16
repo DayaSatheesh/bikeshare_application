@@ -18,4 +18,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8001
 
 # start fastapi application
-CMD ["python", "bikeshare_model_api/app/main.py"]
+CMD ["python", "../bikeshare_model_api/app/main.py"]
