@@ -2,10 +2,8 @@ import sys
 from pathlib import Path
 file = Path(__file__).resolve()
 parent, root, dirparent = file.parent, file.parents[1], file.parents[2]
-
-sys.path.append(str(dirparent))
-print ("root: ",root)
-print ("dirparent: ",dirparent)
+sys.path.append(str(root))
+sys.path.append(str(dirparent)+"/bikeshare_model")
 
 import json
 from typing import Any
