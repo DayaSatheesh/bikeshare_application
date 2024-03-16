@@ -33,19 +33,24 @@ def validate_inputs(*, input_df: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[d
 
 
 class DataInputSchema(BaseModel):
-    PassengerId:Optional[int]
-    Pclass: Optional[int]
-    Name: Optional[str]
-    Sex: Optional[str]
-    Age: Optional[float]
-    SibSp: Optional[int]
-    Parch: Optional[int]
-    Ticket: Optional[str]
-    Fare: Optional[float]
-    Cabin: Optional[Union[str, float]]
-    Embarked: Optional[str]
+    dteday:Optional[str]
+    season: Optional[str]
+    hr: Optional[str]
+    holiday: Optional[str]
+    weekday: Optional[str]
+    workingday: Optional[str]
+    weathersit: Optional[str]
+    temp: Optional[float]
+    atemp: Optional[float]
+    hum: Optional[float]
+    windspeed: Optional[float]
+    casual: Optional[int]
+    registered: Optional[int] 
+    mnth: Optional[str]
+    day: Optional[str]
+    yr: Optional[str]
     #Fare: Optional[int]
-
-
+    
+    
 class MultipleDataInputs(BaseModel):
-    inputs: List[DataInputSchema]
+    inputs: List[DataInputSchema] 

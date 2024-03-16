@@ -3,7 +3,6 @@ import sys
 import pandas as pd
 import numpy as np
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.preprocessing import OneHotEncoder
 
 class WeekdayImputer(BaseEstimator, TransformerMixin):
     """ Impute missing values in 'weekday' column by extracting dayname from 'dteday' column """
@@ -15,7 +14,6 @@ class WeekdayImputer(BaseEstimator, TransformerMixin):
         self.dteday = dteday
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
-        print(X.info())
         X[self.day] = pd.to_datetime(X[self.dteday]).dt.day_name()
         self.nan_indices = X.loc[X.weekday.isnull(), self.variable].index
         return self

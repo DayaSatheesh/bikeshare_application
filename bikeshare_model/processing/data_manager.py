@@ -38,9 +38,14 @@ def num_cat_vars(data):
   print(numerical)
   print(categorical)
 
+def _load_raw_dataset(*, file_name: str) -> pd.DataFrame:
+    dataframe = pd.read_csv(Path(f"{DATASET_DIR}/{file_name}"))
+    return dataframe
+
 def load_dataset(*, file_name: str) -> pd.DataFrame:
     dataframe = pd.read_csv(Path(f"{DATASET_DIR}/{file_name}"))
-    transformed = extract_yr_mnth(dataframe)
+    transformed = pre_pipeline_preparation(data_frame=dataframe)
+
     return transformed
 
 
