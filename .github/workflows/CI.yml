@@ -23,7 +23,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-trained-pipeline
-        path: bikeshare_model/trained_models/*.pkl
+        path: bikeshare_model/trained_models/*.joblib
         retention-days: 1
 
   build:
