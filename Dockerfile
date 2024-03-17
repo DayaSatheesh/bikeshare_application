@@ -1,6 +1,8 @@
 # pull python base image
 FROM python:3.10
 
+ENV PYTHONUNBUFFERED=1
+
 # copy application files
 ADD . .
 
