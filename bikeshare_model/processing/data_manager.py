@@ -62,7 +62,7 @@ def save_pipeline(*, pipeline_to_persist: Pipeline) -> None:
     print("save_file_name: " + save_file_name)
     
     save_path = TRAINED_MODEL_DIR / save_file_name
-    print("save_path: " + save_path)
+    print("save_path: " + str(save_path))
     sys.stdout.flush()
 
     remove_old_pipelines(files_to_keep=[save_file_name])
