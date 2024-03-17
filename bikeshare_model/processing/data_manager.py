@@ -66,14 +66,16 @@ def save_pipeline(*, pipeline_to_persist: Pipeline) -> None:
     sys.stdout.flush()
 
     remove_old_pipelines(files_to_keep=[save_file_name])
+    print("dumping pipeline:"+str(pipeline_to_persist))
     joblib.dump(pipeline_to_persist, save_path)
+    
 
 
 def load_pipeline(*, file_name: str) -> Pipeline:
     """Load a persisted pipeline."""
 
-    print("root: " + ROOT)
-    print("package root: " + TRAINED_MODEL_DIR)
+    print("root: " + str(ROOT))
+    print("package root: " + str(TRAINED_MODEL_DIR))
     file_path = TRAINED_MODEL_DIR / file_name
     print("file_path: ", str(file_path))
     
