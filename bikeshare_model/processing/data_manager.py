@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 
 from bikeshare_model import __version__ as _version
-from bikeshare_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
+from bikeshare_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, ROOT, config
 
 
 ##  Pre-Pipeline Preparation
@@ -72,8 +72,10 @@ def save_pipeline(*, pipeline_to_persist: Pipeline) -> None:
 def load_pipeline(*, file_name: str) -> Pipeline:
     """Load a persisted pipeline."""
 
+    print("root: " + ROOT)
+    print("package root: " + TRAINED_MODEL_DIR)
     file_path = TRAINED_MODEL_DIR / file_name
-    print("file_path: ", file_path)
+    print("file_path: ", str(file_path))
     
     trained_model = joblib.load(filename=file_path)
     return trained_model
