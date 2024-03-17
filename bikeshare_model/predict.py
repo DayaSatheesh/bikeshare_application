@@ -16,6 +16,7 @@ from bikeshare_model.processing.validation import validate_inputs
 
 
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
+print("pipeline file name: ",pipeline_file_name)
 bikeshare_pipe= load_pipeline(file_name=pipeline_file_name)
 
 

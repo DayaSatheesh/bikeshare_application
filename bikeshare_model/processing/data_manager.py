@@ -62,7 +62,7 @@ def save_pipeline(*, pipeline_to_persist: Pipeline) -> None:
     print("save_file_name: " + save_file_name)
     
     save_path = TRAINED_MODEL_DIR / save_file_name
-    print("save_file_name: " + save_file_name)
+    print("save_path: " + save_path)
     sys.stdout.flush()
 
     remove_old_pipelines(files_to_keep=[save_file_name])
@@ -73,6 +73,8 @@ def load_pipeline(*, file_name: str) -> Pipeline:
     """Load a persisted pipeline."""
 
     file_path = TRAINED_MODEL_DIR / file_name
+    print("file_path: ", file_path)
+    
     trained_model = joblib.load(filename=file_path)
     return trained_model
 
